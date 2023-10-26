@@ -24,8 +24,23 @@ export const navLinks = [
 export const hero = {
     english: {
         title: "Hi, I'm",
+        subText: (
+            <>
+            IT enthusiast, craving challenges,
+            <br className="sm:hidden block"/> and eager for fresh new tech insights.
+            </>
+        )
     },
     french: {
-        title: "Salut, moi c'est"
+        title: "Salut, moi c'est",
+        subText: (
+            <>
+            Passionné de développement,
+            <br className="sm:hidden block"/> 
+            assoiffé de défis et 
+            <br className="sm:hidden block"/>
+            avide de nouvelles connaissances.
+            </>
+        ) 
     }
 }
