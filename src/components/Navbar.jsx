@@ -40,6 +40,8 @@ export default function Navbar({ language, onLanguageChange }) {
                     />
                     <p className="text-white text-[18px] font-bold flex">Morgan Foucaut&nbsp;<span className="md:block hidden">| {dev[language]}</span></p>
                 </Link>
+
+                {/* Desktop menu */}
                 <ul className="list-none hidden sm:flex flex-row gap-10">
                     {
                         navLinks.map((link) => (
@@ -57,7 +59,6 @@ export default function Navbar({ language, onLanguageChange }) {
                         ))
                     }
                 </ul>
-                
                 {/* Switch language */}
                 <img 
                     className="hidden sm:block w-[1.2rem] h-[1.2rem] cursor-pointer"
@@ -68,6 +69,7 @@ export default function Navbar({ language, onLanguageChange }) {
                     }}
                 />
                 
+                {/* Mobile menu */}
                 <div className="sm:hidden flex flex-1 justify-end items-center">
                     <img
                         className="w-[2rem] h-[2rem] object-contain cursor-pointer"
@@ -76,15 +78,6 @@ export default function Navbar({ language, onLanguageChange }) {
                         onClick={() => setToggleMenu(!toggleMenu)} 
                     />
                     <div className={`${!toggleMenu ? "hidden" : "flex flex-col"} p-5 bg-slate-900 absolute top-20 right-0 mx-4 my-2 min-w-[150px] z-10 rounded-xl`}>
-                        {/* Switch language */}
-                        <img 
-                            className="w-[1.2rem] h-[1.2rem] cursor-pointer"
-                            src={languages[language].src}
-                            alt={languages[language].language}
-                            onClick={() => {
-                                onLanguageChange()
-                            }}
-                        />
                         <ul className="list-none flex justify-end items-start flex-col">
                             {
                                 navLinks.map((link) => (
@@ -105,6 +98,15 @@ export default function Navbar({ language, onLanguageChange }) {
                                 ))
                             }
                         </ul>
+                        {/* Switch language */}
+                        <img 
+                            className="w-[1.2rem] h-[1.2rem] mt-2 cursor-pointer self-end"
+                            src={languages[language].src}
+                            alt={languages[language].language}
+                            onClick={() => {
+                                onLanguageChange()
+                            }}
+                        />
                     </div>
                 </div>
             </div>
