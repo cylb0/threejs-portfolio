@@ -8,10 +8,10 @@ import { styles } from "../styles"
 export default function Navbar({ language, onLanguageChange }) {
     const languages = {
         french: {
-            src: france
+            src: uk
         },
         english: {
-            src: uk
+            src: france
         }
     }
 
