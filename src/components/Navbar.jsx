@@ -5,7 +5,7 @@ import { useState } from "react"
 import { logo, hamburger, close, france, uk } from '../assets'
 import { styles } from "../styles"
 
-export default function Navbar() {
+export default function Navbar({ language, onLanguageChange }) {
     const languages = {
         french: {
             src: france
@@ -14,8 +14,6 @@ export default function Navbar() {
             src: uk
         }
     }
-    const languageKeys = Object.keys(languages)
-    const [language, setLanguage] = useState(languageKeys[0])
 
     const [active, setActive] = useState("")
     const [toggleMenu, setToggleMenu] = useState(false)
@@ -62,13 +60,11 @@ export default function Navbar() {
                 
                 {/* Switch language */}
                 <img 
-                    className="w-[1.2rem] h-[1.2rem] cursor-pointer"
+                    className="hidden sm:block w-[1.2rem] h-[1.2rem] cursor-pointer"
                     src={languages[language].src}
                     alt={languages[language].language}
                     onClick={() => {
-                        const currIndex = languageKeys.indexOf(language)
-                        const nextIndex = (currIndex + 1) % languageKeys.length
-                        setLanguage(languageKeys[nextIndex])
+                        onLanguageChange()
                     }}
                 />
                 
@@ -79,7 +75,16 @@ export default function Navbar() {
                         alt="menu"
                         onClick={() => setToggleMenu(!toggleMenu)} 
                     />
-                    <div className={`${!toggleMenu ? "hidden" : "flex"} p-5 bg-slate-900 absolute top-20 right-0 mx-4 my-2 min-w-[150px] z-10 rounded-xl`}>
+                    <div className={`${!toggleMenu ? "hidden" : "flex flex-col"} p-5 bg-slate-900 absolute top-20 right-0 mx-4 my-2 min-w-[150px] z-10 rounded-xl`}>
+                        {/* Switch language */}
+                        <img 
+                            className="w-[1.2rem] h-[1.2rem] cursor-pointer"
+                            src={languages[language].src}
+                            alt={languages[language].language}
+                            onClick={() => {
+                                onLanguageChange()
+                            }}
+                        />
                         <ul className="list-none flex justify-end items-start flex-col">
                             {
                                 navLinks.map((link) => (
@@ -95,7 +100,7 @@ export default function Navbar() {
                                             setActive(link.id)
                                         }}
                                     >
-                                        <a href={`#${link.id}`}>{link.title}</a>
+                                        <a href={`#${link.id}`}>{link[`title_${language}`]}</a>
                                     </li>
                                 ))
                             }
