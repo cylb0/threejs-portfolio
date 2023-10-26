@@ -1,14 +1,31 @@
+export const dev = {
+    english: "Web-developer",
+    french: "Développeur-web"
+}
+
 export const navLinks = [
     {
         id: "about",
-        title: "About"
+        title_english: "About",
+        title_french: "A propos"
     },
     {
         id: "work",
-        title: "Work"
+        title_english: "Work",
+        title_french: "Emploi"
     },
     {
         id: "contact",
-        title: "Contact"
+        title_english: "Contact",
+        title_french: "Contact"
     }
 ];
+
+export const hero = {
+    english: {
+        title: "Hi, I'm",
+    },
+    french: {
+        title: "Salut, moi c'est"
+    }
+}

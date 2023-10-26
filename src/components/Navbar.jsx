@@ -1,16 +1,28 @@
 import { Link } from "react-router-dom"
-import { navLinks } from "../constants/constants"
+import { dev, navLinks } from "../constants/constants"
 import { useState } from "react"
 
-import { logo, hamburger, close } from '../assets'
+import { logo, hamburger, close, france, uk } from '../assets'
+import { styles } from "../styles"
 
 export default function Navbar() {
+    const languages = {
+        french: {
+            src: france
+        },
+        english: {
+            src: uk
+        }
+    }
+    const languageKeys = Object.keys(languages)
+    const [language, setLanguage] = useState(languageKeys[0])
+
     const [active, setActive] = useState("")
     const [toggleMenu, setToggleMenu] = useState(false)
 
     return (
         <nav
-            className="w-full flex items-center sm:px-16 px-6 py-3 fixed top-0 z-10 bg-primary mx-auto"
+            className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-10 bg-primary mx-auto`}
         >
             <div
                 className="w-full flex justify-between items-center max-w-7xl mx-auto"
@@ -28,7 +40,7 @@ export default function Navbar() {
                         alt="logo"
                         className="w-20 h-20 object-contain"
                     />
-                    <p className="text-white text-[18px] font-bold flex">Morgan Foucaut&nbsp;<span className="md:block hidden">| Web-developper</span></p>
+                    <p className="text-white text-[18px] font-bold flex">Morgan Foucaut&nbsp;<span className="md:block hidden">| {dev[language]}</span></p>
                 </Link>
                 <ul className="list-none hidden sm:flex flex-row gap-10">
                     {
@@ -39,14 +51,27 @@ export default function Navbar() {
                                     active === link.id ? 
                                     "text-white" : 
                                     "text-secondary"
-                                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                                } hover:text-white text-[15px] font-medium cursor-pointer`}
                                 onClick={() => setActive(link.id)}
                             >
-                                <a href={`#${link.id}`}>{link.title}</a>
+                                <a href={`#${link.id}`}>{link[`title_${language}`]}</a>
                             </li>
                         ))
                     }
                 </ul>
+                
+                {/* Switch language */}
+                <img 
+                    className="w-[1.2rem] h-[1.2rem] cursor-pointer"
+                    src={languages[language].src}
+                    alt={languages[language].language}
+                    onClick={() => {
+                        const currIndex = languageKeys.indexOf(language)
+                        const nextIndex = (currIndex + 1) % languageKeys.length
+                        setLanguage(languageKeys[nextIndex])
+                    }}
+                />
+                
                 <div className="sm:hidden flex flex-1 justify-end items-center">
                     <img
                         className="w-[2rem] h-[2rem] object-contain cursor-pointer"
