@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className="w-full flex items-center px-5 py-3 fixed top-0 z-10 bg-primary"
+            className="w-full flex items-center sm:px-16 px-6 py-3 fixed top-0 z-10 bg-primary mx-auto"
         >
             <div
                 className="w-full flex justify-between items-center max-w-7xl mx-auto"
@@ -28,7 +28,7 @@ export default function Navbar() {
                         alt="logo"
                         className="w-20 h-20 object-contain"
                     />
-                    <p className="text-white text-[18px] font-bold flex">Morgan Foucaut&nbsp;<span className="sm:block hidden">| Web-developper</span></p>
+                    <p className="text-white text-[18px] font-bold flex">Morgan Foucaut&nbsp;<span className="md:block hidden">| Web-developper</span></p>
                 </Link>
                 <ul className="list-none hidden sm:flex flex-row gap-10">
                     {
