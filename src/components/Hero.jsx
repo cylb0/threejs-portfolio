@@ -23,25 +23,23 @@ export default function Hero({ language }) {
             </div>
             <StarsCanvas style={{zIndex: '-1'}}/>
             <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-                <a href="#about">
-                    {/* <div className="w-[35px] h-[65px] rounded-3xl border-4 border-[#b98a16] flex justify-center items-start p-1"> */}
-                        <motion.div
-                            animate={{
-                                y: [0, 24, 0]
-                            }}
-                            transition={{
-                                duration: 1.5,
-                                repeat: Infinity,
-                                repeatType: 'loop'
-                            }}
-                            className="mb-1"
-                        >
-                            <img
-                                className="scale-y-[-1]" 
-                                src={xwing}
-                            />
-                        </motion.div>
-                    {/* </div> */}
+                <a href="#about" className='w-[35px] h-[65px]'>
+                    <motion.div
+                        animate={{
+                            y: [0, 30, 0]
+                        }}
+                        transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            repeatType: 'loop'
+                        }}
+                        className="mb-1"
+                    >
+                        <img
+                            className="scale-y-[-1]" 
+                            src={xwing}
+                        />
+                    </motion.div>
                 </a>
             </div>
         </section>

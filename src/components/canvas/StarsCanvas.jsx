@@ -1,18 +1,24 @@
-import { Suspense, useEffect, useState } from "react"
-import { Canvas } from "@react-three/fiber"
+import { Suspense, useEffect, useRef, useState } from "react"
+import { Canvas, useFrame } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 import CanvasLoader from "../Loader"
 
 const Stars = ({ isMobile }) => {
     const monitor = useGLTF('./need_some_space/scene.gltf')
 
+    const myMesh = useRef()
+
+    useFrame(() => {
+        myMesh.current.rotation.y += (isMobile ? 0.001 : 0.002)
+    })
+
     return (
-        <mesh>
+        <mesh ref={myMesh}>
             <primitive 
                 object={monitor.scene}
-                scale={isMobile ? 100 : 100}
-                position={isMobile ? [-100, -150, 150] : [-180, -110, 110]}
-                rotation={isMobile ? [0, 0, -0.1] : [0, 0, -0.3]} 
+                scale={150}
+                position={[-190, -235, 215]}
+                rotation={[0, 0, 0.1]} 
             />
         </mesh>
     )
@@ -39,17 +45,15 @@ export default function StarsCanvas() {
 
     return (
         <Canvas
-            frameloop="demand"
+            frameloop="always"
             shadows
             camera={{ position: [10, 0, 0], fov: 50 }}
             gl={{ preserveDrawingBuffer: true }}
         >
             <Suspense fallback={<CanvasLoader />}>
                 <OrbitControls 
-                    enableZoom={false}
-                    autoRotate
-                    autoRotateSpeed={0.5}
-                    zoomSpeed={1.5}
+                    enableZoom={true}
+                    maxDistance={250}
                 />
                 <Stars isMobile={isMobile} />
             </Suspense>
