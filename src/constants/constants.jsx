@@ -36,9 +36,11 @@ export const hero = {
         title: "Salut, moi c'est",
         subText: (
             <>
-            Passionné de développement, assoiffé &nbsp;
-            <br className="sm:hidden block"/> 
-            de défis et avide de nouvelles connaissances.
+            Passionné de développement web,
+            <br className="sm:hidden block"/>
+            assoifé de défis et avide
+            <br className="sm:hidden block"/>
+            de nouvelles connaissances.
             </>
         ) 
     }
