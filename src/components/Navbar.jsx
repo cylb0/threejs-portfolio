@@ -59,15 +59,6 @@ export default function Navbar({ language, onLanguageChange }) {
                         ))
                     }
                 </ul>
-                {/* Switch language */}
-                <img 
-                    className="hidden sm:block w-[1.2rem] h-[1.2rem] cursor-pointer"
-                    src={languages[language].src}
-                    alt={languages[language].language}
-                    onClick={() => {
-                        onLanguageChange()
-                    }}
-                />
                 
                 {/* Mobile menu */}
                 <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -98,17 +89,18 @@ export default function Navbar({ language, onLanguageChange }) {
                                 ))
                             }
                         </ul>
-                        {/* Switch language */}
-                        <img 
-                            className="w-[1.2rem] h-[1.2rem] mt-2 cursor-pointer self-end"
-                            src={languages[language].src}
-                            alt={languages[language].language}
-                            onClick={() => {
-                                onLanguageChange()
-                            }}
-                        />
                     </div>
                 </div>
+
+                {/* Switch language */}
+                <img 
+                    className="sm:block ms-3 w-[1.2rem] h-[1.2rem] cursor-pointer"
+                    src={languages[language].src}
+                    alt={languages[language].language}
+                    onClick={() => {
+                        onLanguageChange()
+                    }}
+                />
             </div>
         </nav>
     )
