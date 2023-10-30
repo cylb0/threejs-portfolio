@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { hero } from '../constants/constants';
 import { styles } from '../styles'
 import { StarsCanvas } from './canvas';
+import { xwing } from '../assets'
 
 export default function Hero({ language }) {
 
@@ -23,7 +24,7 @@ export default function Hero({ language }) {
             <StarsCanvas style={{zIndex: '-1'}}/>
             <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
                 <a href="#about">
-                    <div className="w-[35px] h-[64px] rounded-3xl border-4 border-[#b98a16] flex justify-center items-start p-2">
+                    {/* <div className="w-[35px] h-[65px] rounded-3xl border-4 border-[#b98a16] flex justify-center items-start p-1"> */}
                         <motion.div
                             animate={{
                                 y: [0, 24, 0]
@@ -33,9 +34,14 @@ export default function Hero({ language }) {
                                 repeat: Infinity,
                                 repeatType: 'loop'
                             }}
-                            className="w-3 h-3 rounded-full bg-[#b98a16] mb-1"
-                        />
-                    </div>
+                            className="mb-1"
+                        >
+                            <img
+                                className="scale-y-[-1]" 
+                                src={xwing}
+                            />
+                        </motion.div>
+                    {/* </div> */}
                 </a>
             </div>
         </section>

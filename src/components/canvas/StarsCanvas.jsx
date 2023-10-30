@@ -11,8 +11,8 @@ const Stars = ({ isMobile }) => {
             <primitive 
                 object={monitor.scene}
                 scale={isMobile ? 100 : 100}
-                position={isMobile ? [-100, -150, 150] : [-100, -130, 80]}
-                rotation={isMobile ? [0, 0, -0.1] : [0, 0, -0.2]} 
+                position={isMobile ? [-100, -150, 150] : [-180, -110, 110]}
+                rotation={isMobile ? [0, 0, -0.1] : [0, 0, -0.3]} 
             />
         </mesh>
     )
@@ -46,12 +46,14 @@ export default function StarsCanvas() {
         >
             <Suspense fallback={<CanvasLoader />}>
                 <OrbitControls 
-                    enableZoom={true}
-                    autoRotate={true}
+                    enableZoom={false}
+                    autoRotate
                     autoRotateSpeed={0.5}
+                    zoomSpeed={1.5}
                 />
                 <Stars isMobile={isMobile} />
             </Suspense>
+                {/* <axesHelper /> */}
             <Preload all />
         </Canvas>
     )
