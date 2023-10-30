@@ -27,7 +27,8 @@ export const hero = {
         subText: (
             <>
             IT enthusiast, craving challenges,
-            <br className="sm:hidden block"/> and eager for fresh new tech insights.
+            <br className="sm:hidden block"/> 
+            and eager for fresh new tech insights.
             </>
         )
     },
@@ -35,11 +36,9 @@ export const hero = {
         title: "Salut, moi c'est",
         subText: (
             <>
-            Passionné de développement,
+            Passionné de développement, assoiffé &nbsp;
             <br className="sm:hidden block"/> 
-            assoiffé de défis et 
-            <br className="sm:hidden block"/>
-            avide de nouvelles connaissances.
+            de défis et avide de nouvelles connaissances.
             </>
         ) 
     }

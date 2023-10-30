@@ -20,7 +20,7 @@ export default function Navbar({ language, onLanguageChange }) {
 
     return (
         <nav
-            className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-10 bg-primary mx-auto`}
+            className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-10 bg-primary mx-auto`}
         >
             <div
                 className="w-full flex justify-between items-center max-w-7xl mx-auto"
@@ -38,7 +38,7 @@ export default function Navbar({ language, onLanguageChange }) {
                         alt="logo"
                         className="w-20 h-20 object-contain"
                     />
-                    <p className="text-white text-[18px] font-bold flex">Morgan Foucaut&nbsp;<span className="md:block hidden">| {dev[language]}</span></p>
+                    <p className="text-white text-[18px] font-bold flex">Morgan F.&nbsp;<span className="md:block hidden">| {dev[language]}</span></p>
                 </Link>
 
                 {/* Desktop menu */}

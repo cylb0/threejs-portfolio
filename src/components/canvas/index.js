@@ -1,5 +1,5 @@
-import SpaceCanvas from './SpaceCanvas.jsx'
+import StarsCanvas from './StarsCanvas.jsx'
 
 export {
-    SpaceCanvas
+    StarsCanvas
 }
