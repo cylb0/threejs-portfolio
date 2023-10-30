@@ -9,7 +9,7 @@ const Stars = ({ isMobile }) => {
     const myMesh = useRef()
 
     useFrame(() => {
-        myMesh.current.rotation.y += (isMobile ? 0.001 : 0.002)
+        myMesh.current.rotation.y += (isMobile ? 0.001 : 0.0005)
     })
 
     return (
