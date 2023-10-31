@@ -1,3 +1,10 @@
+import { 
+    web,
+    mockup,
+    frontend,
+    backend 
+} from "../assets";
+
 export const dev = {
     english: "Web-developer",
     french: "Développeur-web"
@@ -56,3 +63,26 @@ export const about = {
         content: "Passionné par le monde du développement et fier de pouvoir enfin embrasser mon côté <strong>geek</strong>, j'ai eu un PARCOURS atypique qui m'a permis de relever des défis, mais c'est ma récente reconversion dans le web qui a attisé ma passion et enfin pu combler ma curiosité et mon désir insatiable de stimulation intellectuelle. Chaque ligne de code est un défi que j'ai hâte de relever et mon parcours hétéroclite m'a permis de renforcer mes capacités d'adaptation afin d'apporter des solutions uniques à chaque <strong>problème</strong> auquel j'ai fait face. Lorsque je ne suis pas plongé dans le monde du code, vous pourrez sûrement me retrouver sous un arbre en train de lire une revue scientifiques ou de dévorer de la vulgarisation dans des domaines divers et variés (mention spéciale pour l'astrophysique !). S'il pleut, je serai probablement au chaud en train de jouer à un jeu vidéo plus vieux que moi. Le développement offre la possibilité de constamment développer de nouvelles compétences et je cherche un emploi ou une alternance dans une entreprise qui me permettra de contribuer à de nouveaux challenges. N'hésitez pas à me <a href=\"#contact\"><strong>contacter</strong></a> pour toute opportunité de collaboration"
     }
 }
+
+export const competences = [
+    {
+        title_english: "Web developer",
+        title_french: "Développeur web",
+        icon: web
+    },
+    {
+        title_english: "Mockup design",
+        title_french: "Création de maquettes",
+        icon: mockup
+    },
+    {
+        title_english: "React developer",
+        title_french: "Intégrateur react",
+        icon: frontend
+    },
+    {
+        title_english: "Backend developer",
+        title_french: "Développeur back-end",
+        icon: backend
+    }
+]
