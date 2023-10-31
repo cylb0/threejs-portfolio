@@ -77,7 +77,7 @@ export const competences = [
     },
     {
         title_english: "React developer",
-        title_french: "Intégrateur react",
+        title_french: "Développeur react",
         icon: frontend
     },
     {
