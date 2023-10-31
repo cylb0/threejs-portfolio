@@ -52,7 +52,7 @@ export default function StarsCanvas() {
         >
             <Suspense fallback={<CanvasLoader />}>
                 <OrbitControls 
-                    enableZoom={true}
+                    enableZoom={false}
                     maxDistance={250}
                 />
                 <Stars isMobile={isMobile} />

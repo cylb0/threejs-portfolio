@@ -18,8 +18,8 @@ export default function App() {
           <Navbar language={languages[language]} onLanguageChange={handleLanguageChange} />
           <Hero language={languages[language]} />
         </div>
-        <About />
-        <Experience />
+        <About id="about" language={languages[language]} />
+        <Experience id="experience" language={languages[language]} />
         <Tech />
         <Works />
         <div className="relative z-0">

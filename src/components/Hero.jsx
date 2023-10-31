@@ -13,7 +13,7 @@ export default function Hero({ language }) {
                     <div className="w-5 h-5 rounded-full bg-[#b98a16]" />
                     <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-[#b98a16] to-transparent' />
                 </div>
-                <div>
+                <div className="z-50">
                     <h1 className={`${styles.heroTitle}`}>
                         {hero[language].title}
                         <span className="text-[#b98a16]">&nbsp;Morgan</span>
