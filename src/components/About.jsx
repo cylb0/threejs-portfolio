@@ -28,10 +28,10 @@ const CompetenceCard = ({ index, title, icon }) => {
         >
             <motion.div
                 variants={fadeIn("right", "spring", 1 * index, 0.8)}
-                className="w-full p-px rounded-[10px] bg-[#b98a16] shadow-card hover:bg-white"
+                className="w-full h-[180px] p-px rounded-[10px] bg-[#b98a16] shadow-card hover:bg-white"
             >
-                <div className="bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1">
-                    <p>{title}</p>
+                <div className="h-full bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1">
+                    <p className={styles.textOrange}>{title}</p>
                     <img 
                         src={icon} 
                         className="w-[40px]"
@@ -49,7 +49,7 @@ const About = ({ language }) => {
                 variants={titleSlide(0.2)}
             >
                 <p className={styles.subTitle}>Introduction</p>
-                <h2 className={styles.sectionTitle}>{about[language].title}.</h2>
+                <h2 className={styles.sectionTitle}>{about[language].title}<span className={styles.textOrange}>.</span></h2>
             </motion.div>
 
             <motion.p 
@@ -59,13 +59,26 @@ const About = ({ language }) => {
             />
             <div className="flex justify-center flex-wrap mt-10 gap-10 mx-auto">
                 {competences.map((competence, index) => (
-                    <CompetenceCard 
+                    <CompetenceCard
+                        key={index} 
                         index={index}
                         title={competence[`title_${language}`]}
                         icon={competence.icon}
                     />
                 ))}    
             </div>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
         </>
     )
 }

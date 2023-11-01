@@ -7,8 +7,8 @@ const SectionWrapper = (Component, id) => {
             <motion.section
                 initial= "hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                className={`${styles.paddingX} mt-5 z-100`}
+                viewport={{ once: false, amount: 0.25 }}
+                className={`${styles.paddingX} max-w-7xl mx-auto relative z-0`}
             >
                 <span id={id}>&nbsp;</span>
                 <Component { ...props} />
