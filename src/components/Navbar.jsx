@@ -53,7 +53,7 @@ export default function Navbar({ language, onLanguageChange }) {
                     <img 
                         src={logo} 
                         alt="logo"
-                        className="w-14 h-14 object-contain"
+                        className="w-12 h-12 object-contain"
                     />
                     <p className="text-white text-[18px] font-bold flex">Morgan F.&nbsp;<span className="md:block hidden">| {dev[language]}</span></p>
                 </Link>
