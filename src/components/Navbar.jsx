@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { dev, navLinks } from "../constants/constants"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { logo, hamburger, close, france, uk } from '../assets'
 import { styles } from "../styles"
@@ -17,10 +17,27 @@ export default function Navbar({ language, onLanguageChange }) {
 
     const [active, setActive] = useState("")
     const [toggleMenu, setToggleMenu] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scroll = window.scrollY
+            console.log(scroll)
+            if (scroll > 100) {
+                setScrolled(true)
+            } else {
+                setScrolled(false)
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll)
+
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     return (
         <nav
-            className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-10 bg-primary mx-auto`}
+            className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-50 ${scrolled ? "bg-primary" : "bg-transparent"} mx-auto`}
         >
             <div
                 className="w-full flex justify-between items-center max-w-7xl mx-auto"
@@ -36,7 +53,7 @@ export default function Navbar({ language, onLanguageChange }) {
                     <img 
                         src={logo} 
                         alt="logo"
-                        className="w-20 h-20 object-contain"
+                        className="w-14 h-14 object-contain"
                     />
                     <p className="text-white text-[18px] font-bold flex">Morgan F.&nbsp;<span className="md:block hidden">| {dev[language]}</span></p>
                 </Link>
