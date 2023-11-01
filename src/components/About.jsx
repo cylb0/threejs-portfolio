@@ -67,18 +67,6 @@ const About = ({ language }) => {
                     />
                 ))}    
             </div>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
         </>
     )
 }
