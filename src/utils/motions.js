@@ -9,7 +9,7 @@ export const titleSlide = (delay) => {
             opacity: 1,
             transition: {
                 type: "spring",
-                duration: 1.5,
+                duration: 0.75,
                 delay: delay
             }
         }

@@ -1,8 +1,13 @@
 import { 
-    web,
-    mockup,
+    backend,
     frontend,
-    backend 
+    gastronomica,
+    greta,
+    mockup,
+    restaurant,
+    transport,
+    univlorraine,
+    web
 } from "../assets";
 
 export const dev = {
@@ -84,5 +89,133 @@ export const competences = [
         title_english: "Backend developer",
         title_french: "Développeur back-end",
         icon: backend
+    }
+]
+
+export const experience = {
+    english: {
+        subtitle: "Before my retraining",
+        title: "What I've been up to"
+    },
+    french: {
+        subtitle: "Jusqu'à ma reconversion",
+        title: "Mes dernières expériences"
+    }
+}
+
+export const experiences = [
+    {
+        title_english: "Web Developer training",
+        title_french: "Titre professionnel de Développeur Web et Web Mobile - RNCP 5",
+        at: "Greta Lorraine Nord",
+        where: "Fameck",
+        icon: greta,
+        date: "2022 - 2023",
+        content_english: [
+            "I chose this training for its versatility.",
+            "I learned how to design mockups and bring them to life using HTML, CSS, Javascript and PHP",
+            "I've been introduced to frameworks such as Symfony and Vue.js",
+            "Final project: creating an online store and presenting it to a panel of professionals."
+        ],
+        content_french: [
+            "J'ai choisi cette formation pour sa polyvalence.",
+            "J'ai appris à concevoir, développer et maintenir des applications web interactives.",
+            "Apprentissage des languages HTML, CSS, Javascript et PHP",
+            "Initiation aux frameworks Symfony et Vue.js",
+            "Projet de fin d'étude: réalisation d'une boutique en ligne et soutenance devant un jury de professionnels."
+        ]
+    },
+    {
+        title_english: "Head waiter / Cook",
+        title_french: "Chef de rang / Cuisinier",
+        where: "Luxembourg",
+        icon: restaurant,
+        date: "2019 - 2021",
+        content_english: [
+            "Organizational skills",
+            "Interpersonal qualities with both the team and customers to ensure an excellent experience.",
+            "Rigour and discipline essential to the quality of provided service.",
+            "I worked almost exclusively with Italian team which allowed me to learn a language and enhance my intercultural skills.",
+            "Handling stressful situations, working under pressure and resolving conflict."
+        ],
+        content_french: [
+            "Compétences organisationnelles.",
+            "Développement des qualités relationnelles avec l'équipe et le client pour garantir une excellente expérience.",
+            "Rigueur indispensable à la qualité du service fourni.",
+            "J'ai collaboré avec des équipes exclusivement italiennes, ce qui m'a permis d'apprendre la langue et de renforcer mes compétences interculturelles.",
+            "Gestion de situations stressantes, travail sous pression et résolution des conflits."
+        ]
+    },
+    {
+        title_english: "Employee / Manager",
+        title_french: "Employé / Manager",
+        at: "Gastronomica",
+        where: "Luxembourg",
+        icon: gastronomica,
+        date: "2018 - 2019",
+        content_english: [
+            "Paperwork related to two companies: an event-focused restaurant and an import-export company.",
+            "Management of imports and exports, international business trips, B2B and B2C trade.",
+            "Event organization, manager of the restaurant, occasionally worked in the kitchen to cover staff shortage.",
+            "Human resources management.",
+            "Highly versatile."
+        ],
+        content_french: [
+            "Tâches administratives relatives à deux sociétés, un restaurant spécialisé dans l'évènementiel et une société d'import-export.",
+            "Gestion des importations et des exportations, déplacements professionnels à l'international, commerce BtoB & BtoC.",
+            "Organisation d'évènements, manager du restaurant, j'ai parfois travaillé en cuisine.",
+            "Gestion des ressources humaines.",
+            "Très polyvalent."
+        ]
+    },
+    {
+        title_english: "First year of Master's in Applied Foreign Languages with a focus on international strategy and business.",
+        title_french: "Première année de Master Langues Etrangères Appliquées mention stratégie et commerce à l'international",
+        at: "Université de Lorraine",
+        where: "Nancy",
+        icon: univlorraine,
+        date: "2016 - 2017",
+        content_english: [
+            "In-depth language learning.",
+            "Cost accounting, business taxation and international marketing."
+        ],
+        content_french: [
+            "Apprentissage poussé des langues.",
+            "Comptabilité analytique, fiscalité et marketing international."
+        ]
+    },
+    {
+        title_english: "Internship as an international charterer",
+        title_french: "Stage - Affrèteur international",
+        at: "Marchal Transports",
+        where: "Nancy",
+        icon: transport,
+        date: "2015",
+        content_english: [
+            "Global shipping and logistics solutions",
+            "Securing cost-effective transportation and logistics agreements."
+        ],
+        content_french: [
+            "Organisation des transports internationaux.",
+            "Négociation et gestion des contrats."
+        ]
+    },
+    {
+        title_english: "Bachelor in Applied Foreign Languages and International trade, English - Spanish",
+        title_french: "Licence Langues Etrangères Appliquées Anglais - Espagnol",
+        at: "Université de Lorraine",
+        where: "Nancy",
+        icon: univlorraine,
+        date: "2015",
+        content_english: [
+            "Multilingual proficiency in both English and Spanish. Communication skills in both written and spoken languages.",
+            "Cultural knowledge, skills in translation and interpreting for business.",
+            "Fundamentals in international business, trade and economics."
+        ],
+        content_french: [
+            "Maitrise de l'anglais et de l'espagnol à l'écrit comme à l'oral.",
+            "Connaissances culturelles, compétences en traduction et interprétation techniques.",
+            "Fondamentaux en affaires internationales, droit, commerce et economie."
+        ]
     }
 ]
