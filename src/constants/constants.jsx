@@ -1,8 +1,12 @@
 import { 
     backend,
+    contact,
+    cv,
     frontend,
     gastronomica,
+    github,
     greta,
+    info,
     mockup,
     restaurant,
     transport,
@@ -55,6 +59,25 @@ export const hero = {
             de nouvelles connaissances.
             </>
         ) 
+    }
+}
+
+export const iconLinks = {
+    info: {
+        link: "#about",
+        icon: info
+    },
+    github: {
+        link: "https://github.com/cylb0",
+        icon: github
+    },
+    cv: {
+        link: "/cv.pdf",
+        icon: cv
+    },
+    contact: {
+        link: "#contact",
+        icon: contact
     }
 }
 

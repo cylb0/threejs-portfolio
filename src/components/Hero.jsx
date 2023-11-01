@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { hero } from '../constants/constants';
+import { hero, iconLinks } from '../constants/constants';
 import { styles } from '../styles'
 import { StarsCanvas } from './canvas';
 import { xwing } from '../assets'
@@ -18,7 +18,14 @@ export default function Hero({ language }) {
                         {hero[language].title}
                         <span className="text-[#b98a16]">&nbsp;Morgan</span>
                     </h1>
-                    <p className={`${styles.heroText}`}>{hero[language].subText}</p>
+                    <p className={`${styles.heroText} mb-5`}>{hero[language].subText}</p>
+                    <div className="flex justify-start items-center gap-3 ms-10">
+                        {Object.keys(iconLinks).map((key) => (
+                            <a href={iconLinks[key].link}>
+                                <img src={iconLinks[key].icon} alt={`${key} icon`} className="w-[30px]" />
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
             <StarsCanvas style={{zIndex: '-1'}}/>
