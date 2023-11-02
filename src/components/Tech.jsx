@@ -17,11 +17,14 @@ const Tech = ({ language }) => {
 
             <div className="flex flex-row flex-wrap justify-center">
                 {Object.keys(technos).map((key) => (
-                    <div 
-                        className="w-[150px] h-[150px]"
-                        key={key}
-                    >
-                        <CubeCanvas data={technos[key]} />
+                    <div className="flex flex-col justify-center items-center">
+                        <p className={`${styles.textOrange} font-black text-[18px]`}>{key}</p>
+                        <div 
+                            className="w-[150px] h-[150px]"
+                            key={key}
+                        >
+                            <CubeCanvas data={technos[key]} />
+                        </div>
                     </div>
                 ))}
             </div>

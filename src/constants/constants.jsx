@@ -261,7 +261,7 @@ export const techs = {
 }
 
 export const technos = {
-    design: {
+    Design: {
         xd: {
             name: "Adobe XD",
             icon: xd
@@ -275,7 +275,7 @@ export const technos = {
             icon: id
         }
     },
-    frontend: {
+    Frontend: {
         html: {
             name: "HTML5",
             icon: html
@@ -301,7 +301,7 @@ export const technos = {
             icon: tailwind
         }
     },
-    backend: {
+    Backend: {
         php: {
             name: "PHP",
             icon: php
