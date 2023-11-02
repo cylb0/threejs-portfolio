@@ -17,7 +17,7 @@ const Stars = ({ isMobile }) => {
             <primitive 
                 object={monitor.scene}
                 scale={150}
-                position={[-190, -235, 215]}
+                position={[-190, -270, 215]}
                 rotation={[0, 0, 0.1]} 
             />
         </mesh>
@@ -47,7 +47,7 @@ export default function StarsCanvas() {
         <Canvas
             frameloop="always"
             shadows
-            camera={{ position: [10, 0, 0], fov: 50 }}
+            camera={{ position: [10, 0, 150], fov: 50 }}
             gl={{ preserveDrawingBuffer: true }}
         >
             <Suspense fallback={<CanvasLoader />}>

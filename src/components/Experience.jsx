@@ -26,7 +26,7 @@ const ExperienceCard = ({ experience, language }) => {
                 </div>
             }
         >
-            <h3 className="text-white text-[24px] font-bold">{experience[`title_${language}`]}</h3>
+            <h3 className="text-[#b98a16] text-[24px] font-bold">{experience[`title_${language}`]}</h3>
             <p className="text-secondary text-[16px] font-semibold" style={{margin: 0}}>
                 <span>{experience.at}</span>
                 {
@@ -35,7 +35,7 @@ const ExperienceCard = ({ experience, language }) => {
                 <span>{experience.where}</span>
             </p>
             <ul
-                className="mt-2 list-disc ml-5"
+                className="marker:text-[#b98a16] mt-2 list-disc ml-5"
             >
                 {
                     Array.isArray(experience[`content_${language}`]) &&

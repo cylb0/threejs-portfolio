@@ -31,10 +31,10 @@ const CompetenceCard = ({ index, title, icon }) => {
                 className="w-full h-[180px] p-px rounded-[10px] bg-[#b98a16] shadow-card hover:bg-white"
             >
                 <div className="h-full bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1">
-                    <p className={styles.textOrange}>{title}</p>
+                    <p className={`${styles.textOrange} font-black`}>{title}</p>
                     <img 
                         src={icon} 
-                        className="w-[40px]"
+                        className="w-[40px] mt-5"
                     />
                 </div>
             </motion.div>
