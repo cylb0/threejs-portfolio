@@ -21,7 +21,7 @@ export default function Hero({ language }) {
                     <p className={`${styles.heroText} mb-5`}>{hero[language].subText}</p>
                     <div className="flex justify-start items-center gap-3 ms-10">
                         {Object.keys(iconLinks).map((key) => (
-                            <a href={iconLinks[key].link}>
+                            <a href={iconLinks[key].link} key={key}>
                                 <img src={iconLinks[key].icon} alt={`${key} icon`} className="w-[30px]" />
                             </a>
                         ))}

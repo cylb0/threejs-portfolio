@@ -1,16 +1,28 @@
 import { 
     backend,
     contact,
+    css,
     cv,
     frontend,
     gastronomica,
     github,
     greta,
+    html,
+    id,
     info,
+    js,
     mockup,
+    node,
+    php,
+    ps,
+    react,
     restaurant,
+    symfony,
+    tailwind,
     transport,
+    ts,
     univlorraine,
+    xd,
     web
 } from "../assets";
 
@@ -242,3 +254,65 @@ export const experiences = [
         ]
     }
 ]
+
+export const techs = {
+    title_english: "The techs I use",
+    title_french: "Les technos que j'utilise"
+}
+
+export const technos = {
+    design: {
+        xd: {
+            name: "Adobe XD",
+            icon: xd
+        }, 
+        ps: {
+            name: "Adobe Photoshop",
+            icon: ps
+        },
+        id: {
+            name: "Adobe Indesign",
+            icon: id
+        }
+    },
+    frontend: {
+        html: {
+            name: "HTML5",
+            icon: html
+        },
+        css: {
+            name: "CCS3",
+            icon: css
+        },
+        js: {
+            name: "Javascript",
+            icon: js
+        },
+        ts: {
+            name: "Typescript",
+            icon: ts
+        },
+        react: {
+            name: "React",
+            icon: react
+        },
+        tailwind: {
+            name: "Tailwind css",
+            icon: tailwind
+        }
+    },
+    backend: {
+        php: {
+            name: "PHP",
+            icon: php
+        },
+        node: {
+            name: "Node.js",
+            icon: node
+        },
+        symfony: {
+            name: "Symfony",
+            icon: symfony
+        }
+    }
+}

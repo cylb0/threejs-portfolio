@@ -20,7 +20,7 @@ export default function App() {
         </div>
         <About id="about" language={languages[language]} />
         <Experience id="experience" language={languages[language]} />
-        <Tech />
+        <Tech id="experience" language={languages[language]} />
         <Works />
         <div className="relative z-0">
           <Contact />
