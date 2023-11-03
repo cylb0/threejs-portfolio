@@ -37,8 +37,9 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
         >
             <motion.div
                 variants={fadeIn("left", "spring", 1 * index, 0.8)}
+                className="w-full h-[400px] p-px rounded-[10px] bg-[#b98a16] shadow-card hover:bg-white"
             >
-                <div className="min-h-[400px] bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1 border-2 hover:border-white border-[#b98a16]">
+                <div className="h-full bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1">
                     <div className="flex justify-between">
                         <h3 className={`${styles.textOrange} text-[20px]`}>{name}<span className={styles.textWhite}>.</span></h3>
                         {link_github && 
