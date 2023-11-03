@@ -19,8 +19,8 @@ export default function App() {
           <Hero language={languages[language]} />
         </div>
         <About id="about" language={languages[language]} />
-        <Experience id="experience" language={languages[language]} />
         <Tech id="experience" language={languages[language]} />
+        <Experience id="experience" language={languages[language]} />
         <Works />
         <div className="relative z-0">
           <Contact />

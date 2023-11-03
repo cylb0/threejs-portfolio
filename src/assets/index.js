@@ -15,6 +15,7 @@ import info from './info.png'
 import js from './js.png'
 import logo from './logo.svg'
 import mockup from './mockup.png'
+import mysql from './mysql.png'
 import node from './node.png'
 import php from './php.png'
 import ps from './ps.png'
@@ -48,6 +49,7 @@ export {
     js,
     logo,
     mockup,
+    mysql,
     node,
     php,
     ps,

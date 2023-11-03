@@ -12,6 +12,7 @@ import {
     info,
     js,
     mockup,
+    mysql,
     node,
     php,
     ps,
@@ -309,6 +310,10 @@ export const technos = {
         node: {
             name: "Node.js",
             icon: node
+        },
+        mysql: {
+            name: "MySQL",
+            icon: mysql
         },
         symfony: {
             name: "Symfony",
