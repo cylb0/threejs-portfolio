@@ -38,7 +38,7 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
             <motion.div
                 variants={fadeIn("left", "spring", 1 * index, 0.8)}
             >
-                <div className="min-h-[400px] bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1 border-2 border-white hover:border-[#b98a16]">
+                <div className="min-h-[400px] bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1 border-2 hover:border-white border-[#b98a16]">
                     <div className="flex justify-between">
                         <h3 className={`${styles.textOrange} text-[20px]`}>{name}<span className={styles.textWhite}>.</span></h3>
                         {link_github && 
@@ -49,7 +49,7 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
                     </div>
                     <p className="text-[14px]">{description}</p>
                     <a href={link}>
-                        <img className="mt-5 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot}/>
+                        <img className="mt-5 p-1 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot}/>
                     </a>
                     <p>
                     {renderTags().map((tag, index) => (
