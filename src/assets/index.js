@@ -3,6 +3,7 @@ import close from './close.png'
 import contact from './contact.png'
 import css from './css.png'
 import cv from './cv.png'
+import feuocu from './feuocu.png'
 import france from './france.png'
 import frontend from './frontend.png'
 import gastronomica from './gastronomica.png'
@@ -18,6 +19,8 @@ import mockup from './mockup.png'
 import mysql from './mysql.png'
 import node from './node.png'
 import php from './php.png'
+import pogopvp from './pogopvp.png'
+import portfolio from './portfolio.png'
 import ps from './ps.png'
 import react from './react.png'
 import restaurant from './restaurant.png'
@@ -37,6 +40,7 @@ export {
     contact,
     css,
     cv,
+    feuocu,
     france,
     frontend,
     gastronomica,
@@ -52,6 +56,8 @@ export {
     mysql,
     node,
     php,
+    pogopvp,
+    portfolio,
     ps,
     react,
     restaurant,

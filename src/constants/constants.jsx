@@ -3,6 +3,7 @@ import {
     contact,
     css,
     cv,
+    feuocu,
     frontend,
     gastronomica,
     github,
@@ -15,6 +16,8 @@ import {
     mysql,
     node,
     php,
+    pogopvp,
+    portfolio,
     ps,
     react,
     restaurant,
@@ -321,3 +324,79 @@ export const technos = {
         }
     }
 }
+
+export const works = {
+    english: {
+        subtitle: "My work",
+        title: "My personal projects"
+    },
+    french: {
+        subtitle: "Mon travail",
+        title: "Projets personnels"
+    }
+}
+
+export const projects = [
+    {
+        name: "Portfolio",
+        description_english: "The website you're browsing right now.",
+        description_french: "Le portfolio que vous visitez actuellement.",
+        tags: {
+            front: [
+                "react", "threejs", "tailwind"
+            ]
+        },
+        screenshot: portfolio,
+        link: "/",
+        link_github: "https://github.com/cylb0/threejs-portfolio"
+    },
+    {
+        name: "Feuocu",
+        description_english: "Final project of my training that I presented to a panel of professional developers. It is an online shop with a back-office developed from scratch using Symfony 6.",
+        description_french: "Le projet de fin de formation que j'ai soutenu devant un jury de professionnels. Une boutique en ligne et son back-office développée sous Symfony 6.",
+        tags: {
+            front: [
+                "stimulus", "css"
+            ],
+            back: [
+                "symfony", "twig", "mysql"
+            ]
+        },
+        screenshot: feuocu,
+        link: "https://feuocu.cylb.fr",
+        link_github: ""
+    },
+    {
+        name: "Pogopvp",
+        description_english: "An application built with React that fetches an existing API and allows the user to calculate stats for the mobile game Pokemon GO. It will eventually use my own custom API with French (and more languages ?) data and developed using Nodejs.",
+        description_french: "Une application React exploitant une API anglophone et permettant de calculer des statistiques pour le jeu mobile Pokemon GO. A terme il exploitera ma propre API personnalisée et en français que je développe sous nodeJS.",
+        tags: {
+            front: [
+                "nextjs", "react"
+            ],
+            back: [
+                "api", "json"
+            ]
+        },
+        screenshot: pogopvp,
+        link: "https://pogopvp.cylb.fr",
+        link_github: "https://github.com/cylb0/nextjs-pogopvp-app"
+
+    },
+    {
+        name: "PVP api",
+        description_english: "A project of public API with multilingual support for Pokemon GO mobile game.",
+        description_french: "Mon projet d'API publique pour le jeu mobile Pokemon GO. Elle fournira des données en plusieurs langues et surtout en français.",
+        tags: {
+            front: [
+                "react"
+            ],
+            back: [
+                "nodejs", "sequelize", "express"
+            ]
+        },
+        screenshot: null,
+        link: "",
+        link_github: "https://github.com/cylb0/nodejs-pokemongo-pvp-api"
+    },
+]

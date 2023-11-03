@@ -22,7 +22,6 @@ export default function Navbar({ language, onLanguageChange }) {
     useEffect(() => {
         const handleScroll = () => {
             const scroll = window.scrollY
-            console.log(scroll)
             if (scroll > 100) {
                 setScrolled(true)
             } else {
