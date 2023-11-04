@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 import CanvasLoader from "../Loader"
 
 const Stars = ({ isMobile }) => {
-    const monitor = useGLTF('./need_some_space/scene.gltf')
+    const stars = useGLTF('./need_some_space/scene.gltf')
 
     const myMesh = useRef()
 
@@ -15,7 +15,7 @@ const Stars = ({ isMobile }) => {
     return (
         <mesh ref={myMesh}>
             <primitive 
-                object={monitor.scene}
+                object={stars.scene}
                 scale={150}
                 position={[-190, -270, 215]}
                 rotation={[0, 0, 0.1]} 
@@ -47,12 +47,13 @@ export default function StarsCanvas() {
         <Canvas
             frameloop="always"
             shadows
-            camera={{ position: [10, 0, 150], fov: 50 }}
+            camera={{ position: [10, 0, 50], fov: 50 }}
             gl={{ preserveDrawingBuffer: true }}
         >
             <Suspense fallback={<CanvasLoader />}>
                 <OrbitControls 
                     enableZoom={false}
+                    rotateSpeed={0.5}
                     maxDistance={250}
                 />
                 <Stars isMobile={isMobile} />
