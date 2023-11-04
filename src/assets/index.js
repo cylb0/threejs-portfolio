@@ -1,3 +1,4 @@
+import api from './api.png'
 import backend from './backend.png'
 import close from './close.png'
 import contact from './contact.png'
@@ -35,6 +36,7 @@ import xd from './xd.png'
 import xwing from './xwing.png'
 
 export {
+    api,
     backend,
     close,
     contact,

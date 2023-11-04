@@ -1,4 +1,5 @@
 import { 
+    api,
     backend,
     contact,
     css,
@@ -321,6 +322,10 @@ export const technos = {
         symfony: {
             name: "Symfony",
             icon: symfony
+        },
+        api: {
+            name: "Rest Api",
+            icon: api
         }
     }
 }
@@ -389,7 +394,7 @@ export const projects = [
         description_french: "Mon projet d'API publique pour le jeu mobile Pokemon GO. Elle fournira des données en plusieurs langues et surtout en français.",
         tags: {
             front: [
-                "react"
+                "react, typescript"
             ],
             back: [
                 "nodejs", "sequelize", "express"
@@ -400,3 +405,28 @@ export const projects = [
         link_github: "https://github.com/cylb0/nodejs-pokemongo-pvp-api"
     },
 ]
+
+export const contactSection = {
+    english: {
+        message: "Feel free to contact me anytime.",
+        name_label: "Your name",
+        name_placeholder: "What is your name ?",
+        email_label: "Your email",
+        email_placeholder: "What is your email ?",
+        message_label: "Your message",
+        message_placeholder: "What can I do for you ?",
+        button: "Send",
+        button_loading: "Sending..."
+    },
+    french: {
+        message: "N'hésitez pas à me contacter pour toute opportunité de collaboration.",
+        name_label: "Votre nom",
+        name_placeholder: "Quel est votre nom ?",
+        email_label: "Votre email",
+        email_placeholder: "Quel est votre email ?",
+        message_label: "Votre message",
+        message_placeholder: "Que puis-je faire pour vous ?",
+        button: "Envoyer",
+        button_loading: "Envoi en cours..."
+    }
+}
