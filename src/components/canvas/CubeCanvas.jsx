@@ -1,10 +1,9 @@
 import { Suspense, useRef } from 'react'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei' 
-import { MeshStandardMaterial, TextureLoader } from 'three'
+import { Float, OrbitControls, Preload } from '@react-three/drei' 
+import { TextureLoader } from 'three'
 
 import CanvasLoader from '../Loader'
-import { MeshDepthMaterial } from 'three'
 
 const Cube = ({ data }) => {
 
