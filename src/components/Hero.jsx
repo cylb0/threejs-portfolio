@@ -8,7 +8,7 @@ export default function Hero({ language }) {
 
     return (
         <section className="relative w-full h-screen mx-auto">
-            <div className="absolute sm:px-16 px-6 inset-0 top-[200px] max-w-7xl mx-auto flex flex-row items-start gap-5">
+            <div className="absolute sm:px-16 px-6 inset-0 top-[100px] xs:top-[200px] max-w-7xl mx-auto flex flex-row items-start gap-5">
                 <div className="flex flex-col justify-center items-center">
                     <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-transparent via-[#b98a16] to-transparent' />
                 </div>
@@ -28,7 +28,7 @@ export default function Hero({ language }) {
                 </div>
             </div>
             <StarsCanvas style={{zIndex: '-1'}}/>
-            <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+            <div className="absolute bottom-20 xs:bottom-30 w-full flex justify-center items-center">
                 <a href="#about" className='w-[35px] h-[65px]'>
                     <motion.div
                         animate={{
