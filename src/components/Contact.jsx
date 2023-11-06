@@ -71,14 +71,9 @@ const Contact = ({ language }) => {
             }
         )
     }
-    
-    const printState = () => {
-        console.log(form)
-    }
 
     return (
         <>
-            <div onClick={printState}>PRINT</div>
             <motion.div variants={titleSlide(0.2)}>
                 <p className={styles.subTitle}>{contactSection[language].message}</p>
                 <h2 className={styles.sectionTitle}>Contact<span className={styles.textOrange}>.</span></h2>
