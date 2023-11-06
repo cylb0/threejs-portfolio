@@ -415,8 +415,12 @@ export const contactSection = {
         email_placeholder: "What is your email ?",
         message_label: "Your message",
         message_placeholder: "What can I do for you ?",
+        consent_label: "I consent to my data being used to be contacted.",
+        consent_alert: "You need to consent to be able to send an email.",
         button: "Send",
-        button_loading: "Sending..."
+        button_loading: "Sending...",
+        confirm: "Thank you for your message, I will get back to you a soon as possible.",
+        error: "Oh ! Something went wrong, please try again."
     },
     french: {
         message: "N'hésitez pas à me contacter pour toute opportunité de collaboration.",
@@ -426,7 +430,11 @@ export const contactSection = {
         email_placeholder: "Quel est votre email ?",
         message_label: "Votre message",
         message_placeholder: "Que puis-je faire pour vous ?",
+        consent_label: "J'accepte que mes données soient utilisées pour être contacté.",
+        consent_alert: "Vous devez accepter d'être recontacté pour pouvoir envoyer un message.",
         button: "Envoyer",
-        button_loading: "Envoi en cours..."
+        button_loading: "Envoi en cours...",
+        confirm: "Merci pour votre message, je vous recontacterai au plus vite.",
+        error: "Un problème est survenu, veuillez réessayer."
     }
 }

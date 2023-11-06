@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom"
 import { useState } from "react"
 
-import { Navbar, Hero, About, Experience, Tech, Works, Contact} from './components'
+import { Navbar, Hero, About, Experience, Tech, Works, Contact, Footer} from './components'
 
 export default function App() {
   const languages = ["french", "english"]
@@ -23,8 +23,9 @@ export default function App() {
         <Experience language={languages[language]} />
         <Works language={languages[language]} />
         <div className="relative z-0">
-          <Contact />
+          <Contact language={languages[language]} />
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   )
