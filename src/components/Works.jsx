@@ -23,7 +23,6 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
                 )
             })
         }
-        console.log(tagSpans)
         return tagSpans
     }
 
