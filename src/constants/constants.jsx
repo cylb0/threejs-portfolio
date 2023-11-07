@@ -358,7 +358,7 @@ export const projects = [
     {
         name: "Feuocu",
         description_english: "Final project of my training that I presented to a panel of professional developers. It is an online shop with a back-office developed from scratch using Symfony 6.",
-        description_french: "Le projet de fin de formation que j'ai soutenu devant un jury de professionnels. Une boutique en ligne et son back-office développée sous Symfony 6.",
+        description_french: "Le projet de fin de formation que j'ai soutenu devant un jury de professionnels. Une boutique en ligne fictive et son back-office développée sous Symfony 6.",
         tags: {
             front: [
                 "stimulus", "css"

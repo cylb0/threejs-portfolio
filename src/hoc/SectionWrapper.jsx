@@ -8,7 +8,7 @@ const SectionWrapper = (Component, id) => {
                 initial= "hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
-                className={`${styles.paddingX} max-w-screen mx-auto relative z-0`}
+                className={`${styles.paddingX} max-w-screen mx-auto relative z-0 overflow-hidden`}
             >
                 <span id={id}>&nbsp;</span>
                 <Component { ...props} />
