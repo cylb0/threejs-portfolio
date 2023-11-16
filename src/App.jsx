@@ -1,7 +1,14 @@
 import { BrowserRouter } from "react-router-dom"
-import { useState } from "react"
+import { lazy, useState } from "react"
 
-import { Navbar, Hero, About, Experience, Tech, Works, Contact, Footer} from './components'
+const Navbar = lazy(() => import('./components/Navbar'))
+const Hero = lazy(() => import('./components/Hero'))
+const About = lazy(() => import('./components/About'))
+const Experience = lazy(() => import('./components/Experience'))
+const Tech = lazy(() => import('./components/Tech'))
+const Works = lazy(() => import('./components/Works'))
+const Contact = lazy(() => import('./components/Contact'))
+const Footer = lazy(() => import('./components/Footer'))
 
 export default function App() {
   const languages = ["french", "english"]

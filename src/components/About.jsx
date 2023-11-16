@@ -33,7 +33,8 @@ const CompetenceCard = ({ index, title, icon }) => {
                 <div className="h-full bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1">
                     <p className={`${styles.textOrange} font-black`}>{title}</p>
                     <img 
-                        src={icon} 
+                        src={icon}
+                        alt={icon + ' ' + title} 
                         className="w-[40px] mt-5"
                     />
                 </div>

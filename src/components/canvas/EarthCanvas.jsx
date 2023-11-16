@@ -1,32 +1,10 @@
-import { Suspense, useRef} from "react"
-import { Canvas, useFrame } from "@react-three/fiber"
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
+import { Suspense, lazy } from "react"
+import { Canvas } from "@react-three/fiber"
+import { OrbitControls, Preload } from "@react-three/drei"
 
 import CanvasLoader from "../Loader"
 
-const Earth = () => {
-    const earth = useGLTF('./earth_light/scene.gltf')
-    const meshRef = useRef()
-    const earthScale = 2.5
-    const position = [-earthScale, -earthScale, -earthScale]
-
-    useFrame(() => {
-        meshRef.current.rotation.y += 0.002
-    })
-
-    return (
-        <mesh 
-            ref={meshRef}
-        >
-            <primitive 
-                object={earth.scene}
-                scale={earthScale}
-                position={position}
-                rotation={[0, 0, 0]}
-            />
-        </mesh>
-    )
-}
+import Earth from "./Earth"
 
 export default function EarthCanvas() {
 

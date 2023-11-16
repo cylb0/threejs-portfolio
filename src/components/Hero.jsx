@@ -44,6 +44,7 @@ export default function Hero({ language }) {
                         <img
                             className="scale-y-[-1]" 
                             src={xwing}
+                            alt="see more icon"
                         />
                     </motion.div>
                 </a>

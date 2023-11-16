@@ -112,7 +112,7 @@ export default function Navbar({ language, onLanguageChange }) {
                 <img 
                     className="sm:block ms-3 w-[1.2rem] h-[1.2rem] cursor-pointer"
                     src={languages[language].src}
-                    alt={languages[language].language}
+                    alt={language}
                     onClick={() => {
                         onLanguageChange()
                     }}

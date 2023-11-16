@@ -14,7 +14,8 @@ const Cube = ({ data }) => {
     const renderMaterials = () => {
         const materials = []
         for (let i = 0 ; i < 6 ; i++) {
-            materials.push(<meshStandardMaterial 
+            materials.push(<meshStandardMaterial
+                key={i} 
                 map={textures[i % textures.length]} attach={`material-${i}`}
             />)
         }

@@ -48,15 +48,20 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
                         }
                     </div>
                     <p className="text-[14px]">{description}</p>
-                    <a href={link}>
-                        <img className="mt-5 p-1 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot}/>
-                    </a>
+                    {
+                        link !== '' && <a href={link}>
+                            <img className="mt-5 p-1 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot} alt={name + ' screenshot'}/>
+                        </a>
+                    }
+                    {
+                        link === '' && <img className="mt-5 p-1 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot} alt={name + ' screenshot'}/>
+                    }
                     <p>
                     {renderTags().map((tag, index) => (
-                        <>
+                        <span key={index}>
                         {tag}
                         {index < renderTags().length - 1 ? ' ' : ''}
-                        </>
+                        </span>
                     ))
                     }
                     </p>
@@ -81,6 +86,7 @@ const Works = ({ language }) => {
             <div className="flex justify-center flex-wrap mt-10 gap-10 mx-auto">
                 {projects.map((project, index) => (
                     <ProjectCard 
+                        key={index}
                         index={index}
                         name={project.name}
                         description={project[`description_${language}`]}
