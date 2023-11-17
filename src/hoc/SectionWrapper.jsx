@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 
-const SectionWrapper = (Component, id) => {
+export default function SectionWrapper(Component, id) {
     function HOC(props) {
         return (
             <motion.section
@@ -18,5 +18,3 @@ const SectionWrapper = (Component, id) => {
 
     return HOC
 }
-
-export default SectionWrapper

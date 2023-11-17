@@ -12,11 +12,13 @@ import {
     html,
     id,
     info,
+    jest,
     js,
     mockup,
     mysql,
     node,
     php,
+    phpunit,
     pogopvp,
     portfolio,
     ps,
@@ -27,8 +29,10 @@ import {
     transport,
     ts,
     univlorraine,
+    vscode,
     xd,
-    web
+    web,
+    wordpress
 } from "../assets";
 
 export const dev = {
@@ -327,7 +331,25 @@ export const technos = {
             name: "Rest Api",
             icon: api
         }
-    }
+    },
+    Diverse: {
+        vscode: {
+            name: "Visual Studio Code",
+            icon: vscode
+        },
+        jest: {
+            name: "Jest",
+            icon: jest
+        },
+        wordpress: {
+            name: "Wordpress",
+            icon: wordpress
+        },
+        phpunit: {
+            name: "Phpunit",
+            icon: phpunit
+        }
+    },
 }
 
 export const works = {

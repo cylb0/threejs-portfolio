@@ -44,6 +44,7 @@ const CompetenceCard = ({ index, title, icon }) => {
 }
 
 const About = ({ language }) => {
+
     return (
         <>
             <motion.div
@@ -58,7 +59,7 @@ const About = ({ language }) => {
                 dangerouslySetInnerHTML={{__html: about[language].content}}
                 className={`${styles.paddingX} mt-3 text-secondary text-[16px] max-w-4xl leading-[25px] text-justify`}
             />
-            <div className="flex justify-center flex-wrap mt-10 gap-10 mx-auto">
+            <div className="flex justify-center flex-wrap my-10 gap-10 mx-auto">
                 {competences.map((competence, index) => (
                     <CompetenceCard
                         key={index} 

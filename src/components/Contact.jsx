@@ -10,6 +10,10 @@ import { styles } from "../styles"
 
 import { contactSection } from '../constants/constants'
 
+const emailServiceName = "service_iwtzik9"
+const emailTemplateName = "template_1o2tgyl"
+const emailUserId = "egewM09IJBIs5pazQ"
+
 const Contact = ({ language }) => {
     const [form, setForm] = useState({
         name: "",
@@ -42,8 +46,8 @@ const Contact = ({ language }) => {
         }
 
         emailjs.send(
-            "service_iwtzik9", 
-            "template_1o2tgyl", 
+            emailServiceName, 
+            emailTemplateName, 
             {
                 from_name: form.name,
                 to_name: 'Morgan',
@@ -51,7 +55,7 @@ const Contact = ({ language }) => {
                 to_email: 'foucaut.morgan@gmail.com',
                 message: form.message,
             },
-            "egewM09IJBIs5pazQ"
+            emailUserId
         )
         .then(() => {
               setLoading(false);

@@ -27,7 +27,7 @@ export default function Hero({ language }) {
                     </div>
                 </div>
             </div>
-            <StarsCanvas style={{zIndex: '-1'}}/>
+            <StarsCanvas />
             <div className="absolute bottom-20 xs:bottom-30 w-full flex justify-center items-center">
                 <a href="#about" className='w-[35px] h-[65px]'>
                     <motion.div

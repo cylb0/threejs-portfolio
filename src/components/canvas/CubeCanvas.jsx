@@ -3,7 +3,7 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { Float, OrbitControls, Preload } from '@react-three/drei' 
 import { TextureLoader } from 'three'
 
-import CanvasLoader from '../Loader'
+import CanvasLoader from '../CanvasLoader'
 
 const Cube = ({ data }) => {
 

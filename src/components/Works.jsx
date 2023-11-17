@@ -83,7 +83,7 @@ const Works = ({ language }) => {
                 <h2 className={styles.sectionTitle}>{works[language].title}<span className={styles.textOrange}>.</span></h2>
             </motion.div>
 
-            <div className="flex justify-center flex-wrap mt-10 gap-10 mx-auto">
+            <div className="flex justify-center flex-wrap my-10 gap-10 mx-auto">
                 {projects.map((project, index) => (
                     <ProjectCard 
                         key={index}

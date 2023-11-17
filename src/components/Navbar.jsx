@@ -36,7 +36,7 @@ export default function Navbar({ language, onLanguageChange }) {
 
     return (
         <nav
-            className={`${styles.paddingX} w-screen sm:w-full flex items-center py-2 fixed top-0 z-50 ${scrolled ? "bg-primary" : "bg-transparent"} mx-auto`}
+            className={`${styles.paddingX} w-screen sm:w-full flex items-center py-2 fixed top-0 z-40 ${scrolled ? "bg-primary" : "bg-transparent"} mx-auto`}
         >
             <div
                 className="w-full flex justify-between items-center max-w-7xl mx-auto"

@@ -14,12 +14,14 @@ import hamburger from './hamburger.png'
 import html from './html.png'
 import id from './id.png'
 import info from './info.png'
+import jest from './jest.png'
 import js from './js.png'
 import logo from './logo.svg'
 import mockup from './mockup.png'
 import mysql from './mysql.png'
 import node from './node.png'
 import php from './php.png'
+import phpunit from './phpunit.webp'
 import pogopvp from './pogopvp.webp'
 import portfolio from './portfolio.webp'
 import ps from './ps.png'
@@ -31,7 +33,9 @@ import transport from './transport.png'
 import ts from './ts.png'
 import uk from './uk.png'
 import univlorraine from './univlorraine.png'
+import vscode from './vscode.png'
 import web from './web.png'
+import wordpress from './wordpress.png'
 import xd from './xd.png'
 import xwing from './xwing.png'
 
@@ -52,12 +56,14 @@ export {
     html,
     id,
     info,
+    jest,
     js,
     logo,
     mockup,
     mysql,
     node,
     php,
+    phpunit,
     pogopvp,
     portfolio,
     ps,
@@ -69,7 +75,9 @@ export {
     ts,
     uk,
     univlorraine,
+    vscode,
     web,
+    wordpress,
     xd,
     xwing
 }
