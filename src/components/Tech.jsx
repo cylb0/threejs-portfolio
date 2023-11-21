@@ -7,8 +7,12 @@ import { styles } from '../styles'
 import { titleSlide } from '../utils/motions'
 
 import { techs, technos } from '../constants/constants'
+import { useContext } from 'react'
+import { LanguageContext } from '../contexts/languageContext'
 
-const Tech = ({ language }) => {
+const Tech = () => {
+    const language = useContext(LanguageContext)
+
     return (
         <>
             <motion.div variants={titleSlide(0.2)}>

@@ -1,7 +1,8 @@
 import { BrowserRouter } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 import { Navbar, Hero, About, Experience, Tech, Works, Contact, Footer} from './components'
+import { LanguageContext } from "./contexts/languageContext"
 
 export default function App() {
   const languages = ["french", "english"]
@@ -12,23 +13,23 @@ export default function App() {
   }
 
   return (
-    <>
+    <LanguageContext.Provider value={languages[language]}>
       <BrowserRouter>
         <div className="relative z-0 bg-primary">
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-            <Navbar language={languages[language]} onLanguageChange={handleLanguageChange} />
-            <Hero language={languages[language]} />
+            <Navbar onLanguageChange={handleLanguageChange} />
+            <Hero />
           </div>
-          <About language={languages[language]} />
-          <Tech language={languages[language]} />
-          <Experience language={languages[language]} />
-          <Works language={languages[language]} />
+          <About />
+          <Tech />
+          <Experience />
+          <Works />
           <div className="relative z-0">
-            <Contact language={languages[language]} />
+            <Contact />
           </div>
           <Footer />
         </div>
       </BrowserRouter>
-    </>
+    </LanguageContext.Provider>
   )
 }

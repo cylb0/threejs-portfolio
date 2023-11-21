@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useEffect, useRef, useState } from "react"
+import { useContext, useState } from "react"
 import emailjs from "@emailjs/browser"
 
 import { SectionWrapper } from "../hoc"
@@ -9,12 +9,14 @@ import { fadeIn, titleSlide } from "../utils/motions"
 import { styles } from "../styles"
 
 import { contactSection } from '../constants/constants'
+import { LanguageContext } from "../contexts/languageContext"
 
 const emailServiceName = "service_iwtzik9"
 const emailTemplateName = "template_1o2tgyl"
 const emailUserId = "egewM09IJBIs5pazQ"
 
-const Contact = ({ language }) => {
+const Contact = () => {
+    const language = useContext(LanguageContext)
     const [form, setForm] = useState({
         name: "",
         email: "",

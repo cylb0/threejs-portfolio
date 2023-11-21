@@ -3,8 +3,11 @@ import { hero, iconLinks } from '../constants/constants';
 import { styles } from '../styles'
 import { StarsCanvas } from './canvas';
 import { xwing } from '../assets'
+import { useContext } from 'react';
+import { LanguageContext } from '../contexts/languageContext';
 
-export default function Hero({ language }) {
+export default function Hero() {
+    const language = useContext(LanguageContext)
 
     return (
         <section className="relative w-full h-screen mx-auto">

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
 import { dev, navLinks } from "../constants/constants"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 
 import { logo, hamburger, close, france, uk } from '../assets'
 import { styles } from "../styles"
+import { LanguageContext } from "../contexts/languageContext"
 
-export default function Navbar({ language, onLanguageChange }) {
+export default function Navbar({ onLanguageChange }) {
     const languages = {
         french: {
             src: uk
@@ -14,6 +15,8 @@ export default function Navbar({ language, onLanguageChange }) {
             src: france
         }
     }
+
+    const language = useContext(LanguageContext)
 
     const [active, setActive] = useState("")
     const [toggleMenu, setToggleMenu] = useState(false)

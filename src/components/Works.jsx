@@ -7,6 +7,8 @@ import { github } from '../assets'
 
 import { projects, works } from '../constants/constants'
 import { SectionWrapper } from '../hoc'
+import { useContext } from 'react'
+import { LanguageContext } from '../contexts/languageContext'
 
 const ProjectCard = ({ index, name, description, tags, screenshot, link, link_github }) => {
     
@@ -76,7 +78,9 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
     )
 }
 
-const Works = ({ language }) => {
+const Works = () => {
+    const language = useContext(LanguageContext)
+
     return (
         <>
             <motion.div

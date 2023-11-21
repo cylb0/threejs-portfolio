@@ -8,8 +8,12 @@ import "react-vertical-timeline-component/style.min.css"
 import { styles } from '../styles'
 
 import { experience, experiences } from '../constants/constants'
+import { useContext } from 'react'
+import { LanguageContext } from '../contexts/languageContext'
 
-const ExperienceCard = ({ experience, language }) => {
+const ExperienceCard = ({ experience }) => {
+    const language = useContext(LanguageContext)
+
     return (
         <VerticalTimelineElement
             contentStyle={{ background: '#1d1836', color: '#fff' }}
@@ -53,7 +57,9 @@ const ExperienceCard = ({ experience, language }) => {
     )
 }
 
-const Experience = ({ language }) => {
+const Experience = () => {
+    const language = useContext(LanguageContext)
+
     return (
         <>
             <motion.div variants={titleSlide(0.2)}>

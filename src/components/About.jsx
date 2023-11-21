@@ -6,6 +6,8 @@ import { about, competences } from '../constants/constants'
 
 import { SectionWrapper } from '../hoc'
 import { titleSlide, fadeIn } from '../utils/motions'
+import { useContext } from 'react'
+import { LanguageContext } from '../contexts/languageContext'
 
 const CompetenceCard = ({ index, title, icon }) => {
 
@@ -43,7 +45,8 @@ const CompetenceCard = ({ index, title, icon }) => {
     )
 }
 
-const About = ({ language }) => {
+const About = () => {
+    const language = useContext(LanguageContext)
 
     return (
         <>
