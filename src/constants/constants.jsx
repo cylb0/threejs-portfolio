@@ -6,6 +6,7 @@ import {
     cv,
     feuocu,
     frontend,
+    gameguy,
     gastronomica,
     github,
     greta,
@@ -423,9 +424,22 @@ export const projects = [
             ]
         },
         screenshot: null,
-        link: "",
+        link: null,
         link_github: "https://github.com/cylb0/nodejs-pokemongo-pvp-api"
     },
+    {
+        name: "Game Guy",
+        description_english: "An interactive famous handheld look-alike on which you can play a famous block game.",
+        description_french: "Un petit projet de console portable permettant de jouer à un célèbre jeu de blocs.",
+        tags: {
+            front: [
+                "react, typescript"
+            ]
+        },
+        screenshot: gameguy,
+        link: "https://gameguy.cylb.fr",
+        link_github: "https://github.com/cylb0/blocks"
+    }
 ]
 
 export const contactSection = {

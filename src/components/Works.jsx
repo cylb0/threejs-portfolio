@@ -10,6 +10,9 @@ import { SectionWrapper } from '../hoc'
 
 const ProjectCard = ({ index, name, description, tags, screenshot, link, link_github }) => {
     
+    console.log('screenshot: ',screenshot)
+    console.log('link: ',link)
+
     const renderTags = () => {
         const tagSpans = []
         for (const cat in tags) {
@@ -49,7 +52,7 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
                     </div>
                     <p className="text-[14px]">{description}</p>
                     {
-                        link !== '' && <a href={link}>
+                        (screenshot !== null && link !== null) && <a href={link}>
                             <img className="mt-5 p-1 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot} alt={name + ' screenshot'}/>
                         </a>
                     }

@@ -7,6 +7,7 @@ import cv from './cv.png'
 import feuocu from './feuocu.webp'
 import france from './france.png'
 import frontend from './frontend.png'
+import gameguy from './gameguy.png'
 import gastronomica from './gastronomica.webp'
 import github from './github.png'
 import greta from './greta.png'
@@ -49,6 +50,7 @@ export {
     feuocu,
     france,
     frontend,
+    gameguy,
     gastronomica,
     github,
     greta,
