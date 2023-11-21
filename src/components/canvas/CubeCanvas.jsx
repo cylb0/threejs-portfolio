@@ -1,4 +1,4 @@
-import { Suspense, useRef } from 'react'
+import { Suspense, useMemo, useRef, useState } from 'react'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { Float, OrbitControls, Preload } from '@react-three/drei' 
 import { TextureLoader } from 'three'
@@ -7,9 +7,9 @@ import CanvasLoader from '../CanvasLoader'
 
 const Cube = ({ data }) => {
 
-    const textures = Object.values(data).map(element => (
+    const textures = Object.values(data).map(element =>
         useLoader(TextureLoader, element.icon)
-    ))
+    )
 
     const renderMaterials = () => {
         const materials = []

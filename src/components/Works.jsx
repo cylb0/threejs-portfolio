@@ -9,12 +9,10 @@ import { projects, works } from '../constants/constants'
 import { SectionWrapper } from '../hoc'
 import { useContext } from 'react'
 import { LanguageContext } from '../contexts/languageContext'
+import { IsMobileContext } from '../contexts/isMobileContext'
 
 const ProjectCard = ({ index, name, description, tags, screenshot, link, link_github }) => {
     
-    console.log('screenshot: ',screenshot)
-    console.log('link: ',link)
-
     const renderTags = () => {
         const tagSpans = []
         for (const cat in tags) {
@@ -80,6 +78,7 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
 
 const Works = () => {
     const language = useContext(LanguageContext)
+    const isMobile = useContext(IsMobileContext)
 
     return (
         <>
@@ -92,7 +91,7 @@ const Works = () => {
 
             <div className="flex justify-center flex-wrap my-10 gap-10 mx-auto">
                 {projects.map((project, index) => (
-                    <ProjectCard 
+                    !(isMobile && !project.mobile) && <ProjectCard 
                         key={index}
                         index={index}
                         name={project.name}

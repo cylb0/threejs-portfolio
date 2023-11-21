@@ -366,6 +366,7 @@ export const works = {
 
 export const projects = [
     {
+        mobile: true,
         name: "Portfolio",
         description_english: "The website you're browsing right now.",
         description_french: "Le portfolio que vous visitez actuellement.",
@@ -379,6 +380,7 @@ export const projects = [
         link_github: "https://github.com/cylb0/threejs-portfolio"
     },
     {
+        mobile: true,
         name: "Feuocu",
         description_english: "Final project of my training that I presented to a panel of professional developers. It is an online shop with a back-office developed from scratch using Symfony 6.",
         description_french: "Le projet de fin de formation que j'ai soutenu devant un jury de professionnels. Une boutique en ligne fictive et son back-office développée sous Symfony 6.",
@@ -395,6 +397,7 @@ export const projects = [
         link_github: ""
     },
     {
+        mobile: true,
         name: "Pogopvp",
         description_english: "An application built with React that fetches an existing API and allows the user to calculate stats for the mobile game Pokemon GO. It will eventually use my own custom API with French (and more languages ?) data and developed using Nodejs.",
         description_french: "Une application React exploitant une API anglophone et permettant de calculer des statistiques pour le jeu mobile Pokemon GO. A terme il exploitera ma propre API personnalisée et en français que je développe sous nodeJS.",
@@ -412,6 +415,7 @@ export const projects = [
 
     },
     {
+        mobile: true,
         name: "PVP api",
         description_english: "A project of public API with multilingual support for Pokemon GO mobile game.",
         description_french: "Mon projet d'API publique pour le jeu mobile Pokemon GO. Elle fournira des données en plusieurs langues et surtout en français.",
@@ -428,6 +432,7 @@ export const projects = [
         link_github: "https://github.com/cylb0/nodejs-pokemongo-pvp-api"
     },
     {
+        mobile: false,
         name: "Game Guy",
         description_english: "An interactive famous handheld look-alike on which you can play a famous block game.",
         description_french: "Un petit projet de console portable permettant de jouer à un célèbre jeu de blocs.",

@@ -1,7 +1,8 @@
-import { Suspense, useEffect, useRef, useState } from "react"
+import { Suspense, useContext, useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 import CanvasLoader from "../CanvasLoader"
+import { IsMobileContext } from "../../contexts/isMobileContext"
 
 const Stars = ({ isMobile }) => {
     const stars = useGLTF('./need_some_space/scene.gltf')
@@ -25,22 +26,7 @@ const Stars = ({ isMobile }) => {
 }
 
 export default function StarsCanvas() {
-    const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 500px)')
-        setIsMobile(mediaQuery.matches)
-
-        const handleMediaQueryChange = (event) => {
-            setIsMobile(event.matches)
-        }
-
-        mediaQuery.addEventListener('change', handleMediaQueryChange)
-
-        return () => {
-            mediaQuery.removeEventListener('change', handleMediaQueryChange)
-        }
-    }, [])
+    const isMobile = useContext(IsMobileContext)
 
     return (
         <Canvas
