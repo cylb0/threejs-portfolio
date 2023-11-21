@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import emailjs from "@emailjs/browser"
 
 import { SectionWrapper } from "../hoc"
@@ -25,6 +25,14 @@ const Contact = ({ language }) => {
 
     const [confirm, setConfirm] = useState(false)
     const [error, setError] = useState("")
+
+    const inputRef = useRef(null)
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus()
+        }
+    }, [])
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target
@@ -101,6 +109,7 @@ const Contact = ({ language }) => {
                         <label className="flex flex-col">
                             <span>{contactSection[language].name_label}</span>
                             <input 
+                                ref={inputRef}
                                 type="text" 
                                 name="name" 
                                 value={form.name}
@@ -123,7 +132,7 @@ const Contact = ({ language }) => {
                         </label>
 
                         <label className="flex flex-col">
-                            <span>{contactSection[language].email_label}</span>
+                            <span>{contactSection[language].message_label}</span>
                             <textarea
                                 rows={10} 
                                 name="message" 
