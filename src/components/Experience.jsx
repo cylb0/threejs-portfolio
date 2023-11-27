@@ -73,6 +73,7 @@ const Experience = () => {
                         <ExperienceCard key={index} experience={experience} language={language} />
                     ))}
                 </VerticalTimeline>
+                <a className="mt-2 hover:text-[#b98a16]" href="CV.pdf" download="CV_Morgan_Foucaut.pdf">Télécharger mon CV au format PDF</a>
             </div>
         </>
         
