@@ -148,6 +148,12 @@ export const experience = {
     }
 }
 
+export const resume = {
+    english: "Download my resume in PDF format.",
+    french: "Télécharger mon CV au format PDF.",
+    source: "CV.pdf"
+}
+
 export const experiences = [
     {
         title_english: "Web Developer training",
@@ -384,6 +390,9 @@ export const projects = [
         name: "Feuocu",
         description_english: "Final project of my training that I presented to a panel of professional developers. It is an online shop with a back-office developed from scratch using Symfony 6.",
         description_french: "Le projet de fin de formation que j'ai soutenu devant un jury de professionnels. Une boutique en ligne fictive et son back-office développée sous Symfony 6.",
+        download: "feuocu.pdf",
+        download_english: "Download my dissertation (in french).",
+        download_french: "Télécharger mon dossier.",
         tags: {
             front: [
                 "stimulus", "css"
@@ -431,20 +440,20 @@ export const projects = [
         link: null,
         link_github: "https://github.com/cylb0/nodejs-pokemongo-pvp-api"
     },
-    // {
-    //     mobile: false,
-    //     name: "Game Guy",
-    //     description_english: "An interactive famous handheld look-alike on which you can play a famous block game.",
-    //     description_french: "Un petit projet de console portable permettant de jouer à un célèbre jeu de blocs.",
-    //     tags: {
-    //         front: [
-    //             "react, typescript"
-    //         ]
-    //     },
-    //     screenshot: gameguy,
-    //     link: "https://gameguy.cylb.fr",
-    //     link_github: "https://github.com/cylb0/blocks"
-    // }
+    {
+        mobile: false,
+        name: "Game Guy",
+        description_english: "An interactive famous handheld look-alike on which you can play a famous block game.",
+        description_french: "Un petit projet de console portable permettant de jouer à un célèbre jeu de blocs.",
+        tags: {
+            front: [
+                "react, typescript"
+            ]
+        },
+        screenshot: gameguy,
+        link: "https://gameguy.cylb.fr",
+        link_github: "https://github.com/cylb0/blocks"
+    }
 ]
 
 export const contactSection = {

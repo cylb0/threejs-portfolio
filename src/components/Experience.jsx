@@ -7,7 +7,7 @@ import { titleSlide } from '../utils/motions'
 import "react-vertical-timeline-component/style.min.css"
 import { styles } from '../styles'
 
-import { experience, experiences } from '../constants/constants'
+import { experience, experiences, resume } from '../constants/constants'
 import { useContext } from 'react'
 import { LanguageContext } from '../contexts/languageContext'
 
@@ -73,7 +73,13 @@ const Experience = () => {
                         <ExperienceCard key={index} experience={experience} language={language} />
                     ))}
                 </VerticalTimeline>
-                <a className="mt-2 hover:text-[#b98a16]" href="CV.pdf" download="CV_Morgan_Foucaut.pdf">Télécharger mon CV au format PDF</a>
+                {
+                    resume !== null && 
+                        <a 
+                            className="mt-2 hover:text-[#b98a16]" 
+                            href={resume.source} 
+                            download="CV_Morgan_Foucaut.pdf">{resume[language]}</a>
+                }
             </div>
         </>
         

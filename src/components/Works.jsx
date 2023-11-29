@@ -11,7 +11,7 @@ import { useContext } from 'react'
 import { LanguageContext } from '../contexts/languageContext'
 import { IsMobileContext } from '../contexts/isMobileContext'
 
-const ProjectCard = ({ index, name, description, tags, screenshot, link, link_github }) => {
+const ProjectCard = ({ index, name, description, download, download_text, tags, screenshot, link, link_github }) => {
     
     const renderTags = () => {
         const tagSpans = []
@@ -51,6 +51,13 @@ const ProjectCard = ({ index, name, description, tags, screenshot, link, link_gi
                         }
                     </div>
                     <p className="text-[14px]">{description}</p>
+                    {
+                        download !== null && download_text !== null && 
+                        <a 
+                            className="mt-2 text-[12px] hover:text-[#b98a16] hover:cursor-pointer" 
+                            href={download}
+                            download={download}>{download_text}</a>
+                    }
                     {
                         (screenshot !== null && link !== null) && <a href={link}>
                             <img className="mt-5 p-1 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot} alt={name + ' screenshot'}/>
@@ -96,6 +103,8 @@ const Works = () => {
                         index={index}
                         name={project.name}
                         description={project[`description_${language}`]}
+                        download={project.download}
+                        download_text={project[`download_${language}`]}
                         tags={project.tags}
                         screenshot={project.screenshot}
                         link={project.link}
