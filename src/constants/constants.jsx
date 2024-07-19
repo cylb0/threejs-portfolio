@@ -4,6 +4,7 @@ import {
     contact,
     css,
     cv,
+    docker,
     feuocu,
     frontend,
     gameguy,
@@ -33,7 +34,8 @@ import {
     vscode,
     xd,
     web,
-    wordpress
+    wordpress,
+    whyvision
 } from "../assets";
 
 export const dev = {
@@ -76,7 +78,7 @@ export const hero = {
             <>
             Passionné de développement web,&nbsp;
             <br className="sm:hidden block"/>
-            assoifé de défis et avide&nbsp;
+            assoiffé de défis et avide&nbsp;
             <br className="sm:hidden block"/>
             de nouvelles connaissances.
             </>
@@ -155,6 +157,24 @@ export const resume = {
 }
 
 export const experiences = [
+    {
+        title_english: "Web developer",
+        title_french: "Développeur web",
+        at: "why·Vision",
+        where: "Metz",
+        icon: whyvision,
+        date: "Février 2024 - Now",
+        content_english: [
+            "I'm currently developing an application that allows users to create videos programmatically.",
+            "The app allows users to create videos on a user-friendly UI, those videos then rendered server-side.",
+            "Tech stack: React (Typescript) / NodeJS (Adonisjs + Typescript) / AWS / MySQL / Docker."
+        ],
+        content_french: [
+            "Je travaille actuellement au développement d'une application de génération programmatique de videos.",
+            "Cette application permet aux utilisateur de créer simplement des videos grâce à une interface simplifiée, ces vidéos sont ensuite rendues côté serveur.",
+            "Stack technique: React (Typescript) / NodeJS (Adonisjs + Typescript) / AWS / MySQL / Docker."
+        ]
+    },
     {
         title_english: "Web Developer training",
         title_french: "Titre professionnel de Développeur Web et Web Mobile - RNCP 5",
@@ -340,6 +360,10 @@ export const technos = {
         }
     },
     Diverse: {
+        docker: {
+            name: "Docker",
+            icon: docker
+        },
         vscode: {
             name: "Visual Studio Code",
             icon: vscode
@@ -402,7 +426,7 @@ export const projects = [
             ]
         },
         screenshot: feuocu,
-        link: "https://feuocu.cylb.fr",
+        link: "https://feuocu.morganfoucaut.fr",
         link_github: ""
     },
     {
@@ -419,7 +443,7 @@ export const projects = [
             ]
         },
         screenshot: pogopvp,
-        link: "https://pogopvp.cylb.fr",
+        link: "https://pogopvp.morganfoucaut.fr",
         link_github: "https://github.com/cylb0/nextjs-pogopvp-app"
 
     },
@@ -451,7 +475,7 @@ export const projects = [
             ]
         },
         screenshot: gameguy,
-        link: "https://gameguy.cylb.fr",
+        link: "https://gameguy.morganfoucaut.fr",
         link_github: "https://github.com/cylb0/blocks"
     }
 ]

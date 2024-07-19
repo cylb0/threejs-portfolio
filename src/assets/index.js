@@ -4,6 +4,7 @@ import close from './close.png'
 import contact from './contact.png'
 import css from './css.png'
 import cv from './cv.png'
+import docker from './docker.png'
 import feuocu from './feuocu.webp'
 import france from './france.png'
 import frontend from './frontend.png'
@@ -37,6 +38,7 @@ import univlorraine from './univlorraine.png'
 import vscode from './vscode.png'
 import web from './web.png'
 import wordpress from './wordpress.png'
+import whyvision from './whyvision.png'
 import xd from './xd.png'
 import xwing from './xwing.png'
 
@@ -47,6 +49,7 @@ export {
     contact,
     css,
     cv,
+    docker,
     feuocu,
     france,
     frontend,
@@ -79,6 +82,7 @@ export {
     univlorraine,
     vscode,
     web,
+    whyvision,
     wordpress,
     xd,
     xwing
