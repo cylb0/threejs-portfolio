@@ -39,7 +39,7 @@ const ProjectCard = ({ index, name, description, download, download_text, tags, 
         >
             <motion.div
                 variants={fadeIn("left", "spring", 1 * index, 0.8)}
-                className="w-full h-[400px] p-px rounded-[10px] bg-[#b98a16] shadow-card hover:bg-white"
+                className="w-full p-px rounded-[10px] bg-[#b98a16] shadow-card hover:bg-white"
             >
                 <div className="h-full bg-primary rounded-[10px] p-3 flex flex-col justify-center items-center gap-1">
                     <div className="flex justify-between">
@@ -59,12 +59,9 @@ const ProjectCard = ({ index, name, description, download, download_text, tags, 
                             download={download}>{download_text}</a>
                     }
                     {
-                        (screenshot !== null && link !== null) && <a href={link}>
-                            <img className="mt-5 p-1 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot} alt={name + ' screenshot'}/>
+                        screenshot !== null && <a href={link}>
+                            <img className={`mt-5 p-1 ${link !== null ? "hover:border-2 hover:border-[#b98a16] hover:scale-105" : ""}  rounded-lg`} src={screenshot} alt={name + ' screenshot'}/>
                         </a>
-                    }
-                    {
-                        link === '' && <img className="mt-5 p-1 hover:border-2 hover:border-[#b98a16] hover:scale-105 rounded-lg" src={screenshot} alt={name + ' screenshot'}/>
                     }
                     <p>
                     {renderTags().map((tag, index) => (
@@ -98,7 +95,7 @@ const Works = () => {
 
             <div className="flex justify-center flex-wrap my-10 gap-10 mx-auto">
                 {projects.map((project, index) => (
-                    !(isMobile && !project.mobile) && <ProjectCard 
+                    /**!(isMobile && !project.mobile) &&*/ <ProjectCard 
                         key={index}
                         index={index}
                         name={project.name}

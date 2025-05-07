@@ -16,6 +16,7 @@ import {
     info,
     jest,
     js,
+    minecraft,
     mockup,
     mysql,
     node,
@@ -488,6 +489,8 @@ export const projects = [
                 "react", "typescript", "three.js",
             ]
         },
+        screenshot: minecraft,
+        link: null,
         link_github: "https://github.com/cylb0/minecraft_like_sandbox_V2",
     }
 ]

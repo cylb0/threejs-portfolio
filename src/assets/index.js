@@ -19,6 +19,7 @@ import info from './info.png'
 import jest from './jest.png'
 import js from './js.png'
 import logo from './logo.svg'
+import minecraft from './minecraft.png'
 import mockup from './mockup.png'
 import mysql from './mysql.png'
 import node from './node.png'
@@ -64,6 +65,7 @@ export {
     jest,
     js,
     logo,
+    minecraft,
     mockup,
     mysql,
     node,
