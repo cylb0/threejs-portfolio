@@ -22,10 +22,12 @@ export default function Navbar({ onLanguageChange }) {
     const [toggleMenu, setToggleMenu] = useState(false)
     const [scrolled, setScrolled] = useState(false)
 
+    useEffect(() => console.log(scrolled), [scrolled])
+
     useEffect(() => {
         const handleScroll = () => {
             const scroll = window.scrollY
-            if (scroll > 100) {
+            if (scroll > 0) {
                 setScrolled(true)
             } else {
                 setScrolled(false)
@@ -39,7 +41,7 @@ export default function Navbar({ onLanguageChange }) {
 
     return (
         <nav
-            className={`${styles.paddingX} w-screen sm:w-full flex items-center py-2 fixed top-0 z-40 ${scrolled ? "bg-primary" : "bg-transparent"} mx-auto`}
+            className={`${styles.paddingX} w-screen sm:w-full flex items-center py-2 fixed top-0 z-50 transition-colors duration-1000 ease-in-out ${scrolled ? "bg-primary" : "bg-transparent"} mx-auto`}
         >
             <div
                 className="w-full flex justify-between items-center max-w-7xl mx-auto"

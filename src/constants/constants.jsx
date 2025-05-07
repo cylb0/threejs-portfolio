@@ -163,14 +163,14 @@ export const experiences = [
         at: "why·Vision",
         where: "Metz",
         icon: whyvision,
-        date: "Février 2024 - Now",
+        date: "Février 2024 - Oct 2024",
         content_english: [
-            "I'm currently developing an application that allows users to create videos programmatically.",
-            "The app allows users to create videos on a user-friendly UI, those videos then rendered server-side.",
+            "I worked on developing an application that allows users to create videos programmatically.",
+            "The app allows users to create videos on a user-friendly UI, those videos are then rendered server-side.",
             "Tech stack: React (Typescript) / NodeJS (Adonisjs + Typescript) / AWS / MySQL / Docker."
         ],
         content_french: [
-            "Je travaille actuellement au développement d'une application de génération programmatique de videos.",
+            "J'ai travaillé au développement d'une application de génération programmatique de videos.",
             "Cette application permet aux utilisateur de créer simplement des videos grâce à une interface simplifiée, ces vidéos sont ensuite rendues côté serveur.",
             "Stack technique: React (Typescript) / NodeJS (Adonisjs + Typescript) / AWS / MySQL / Docker."
         ]
@@ -477,6 +477,18 @@ export const projects = [
         screenshot: gameguy,
         link: "https://gameguy.morganfoucaut.fr",
         link_github: "https://github.com/cylb0/blocks"
+    },
+    {
+        mobile: false,
+        name: "Minecraft Clone",
+        description_english: "An on-progress full web minecraft clone.",
+        description_french: "Un project minecraft-like 100% web.",
+        tags: {
+            front: [
+                "react", "typescript", "three.js",
+            ]
+        },
+        link_github: "https://github.com/cylb0/minecraft_like_sandbox_V2",
     }
 ]
 
