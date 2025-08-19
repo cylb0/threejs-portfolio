@@ -14,7 +14,6 @@ export default function App() {
     const mediaQuery = window.matchMedia('(max-width: 500px)')
 
     const handleMediaQueryChange = (event) => {
-      console.log('mediaquerychange: ', event.matches)
       setIsMobile(event.matches)
     }
 

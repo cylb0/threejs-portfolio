@@ -22,8 +22,6 @@ export default function Navbar({ onLanguageChange }) {
     const [toggleMenu, setToggleMenu] = useState(false)
     const [scrolled, setScrolled] = useState(false)
 
-    useEffect(() => console.log(scrolled), [scrolled])
-
     useEffect(() => {
         const handleScroll = () => {
             const scroll = window.scrollY
