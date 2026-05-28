@@ -410,26 +410,26 @@ export const projects = [
         link: "/",
         link_github: "https://github.com/cylb0/threejs-portfolio"
     },
-    {
-        mobile: true,
-        name: "Feuocu",
-        description_english: "Final project of my training that I presented to a panel of professional developers. It is an online shop with a back-office developed from scratch using Symfony 6.",
-        description_french: "Le projet de fin de formation que j'ai soutenu devant un jury de professionnels. Une boutique en ligne fictive et son back-office développée sous Symfony 6.",
-        download: "feuocu.pdf",
-        download_english: "Download my dissertation (in french).",
-        download_french: "Télécharger mon dossier.",
-        tags: {
-            front: [
-                "stimulus", "css"
-            ],
-            back: [
-                "symfony", "twig", "mysql"
-            ]
-        },
-        screenshot: feuocu,
-        link: "https://feuocu.morganfoucaut.fr",
-        link_github: ""
-    },
+    // {
+    //     mobile: true,
+    //     name: "Feuocu",
+    //     description_english: "Final project of my training that I presented to a panel of professional developers. It is an online shop with a back-office developed from scratch using Symfony 6.",
+    //     description_french: "Le projet de fin de formation que j'ai soutenu devant un jury de professionnels. Une boutique en ligne fictive et son back-office développée sous Symfony 6.",
+    //     download: "feuocu.pdf",
+    //     download_english: "Download my dissertation (in french).",
+    //     download_french: "Télécharger mon dossier.",
+    //     tags: {
+    //         front: [
+    //             "stimulus", "css"
+    //         ],
+    //         back: [
+    //             "symfony", "twig", "mysql"
+    //         ]
+    //     },
+    //     screenshot: feuocu,
+    //     link: "https://feuocu.morganfoucaut.fr",
+    //     link_github: ""
+    // },
     {
         mobile: true,
         name: "Pogopvp",
@@ -448,23 +448,23 @@ export const projects = [
         link_github: "https://github.com/cylb0/nextjs-pogopvp-app"
 
     },
-    {
-        mobile: true,
-        name: "PVP api",
-        description_english: "A project of public API with multilingual support for Pokemon GO mobile game.",
-        description_french: "Mon projet d'API publique pour le jeu mobile Pokemon GO. Elle fournira des données en plusieurs langues et surtout en français.",
-        tags: {
-            front: [
-                "react, typescript"
-            ],
-            back: [
-                "nodejs", "sequelize", "express"
-            ]
-        },
-        screenshot: null,
-        link: null,
-        link_github: "https://github.com/cylb0/nodejs-pokemongo-pvp-api"
-    },
+    // {
+    //     mobile: true,
+    //     name: "PVP api",
+    //     description_english: "A project of public API with multilingual support for Pokemon GO mobile game.",
+    //     description_french: "Mon projet d'API publique pour le jeu mobile Pokemon GO. Elle fournira des données en plusieurs langues et surtout en français.",
+    //     tags: {
+    //         front: [
+    //             "react, typescript"
+    //         ],
+    //         back: [
+    //             "nodejs", "sequelize", "express"
+    //         ]
+    //     },
+    //     screenshot: null,
+    //     link: null,
+    //     link_github: "https://github.com/cylb0/nodejs-pokemongo-pvp-api"
+    // },
     {
         mobile: false,
         name: "Game Guy",
