@@ -25,3 +25,7 @@ dist-ssr
 
 # ENV
 .env
+
+# Assets
+public/CV.pdf
+public/feuocu.pdf
